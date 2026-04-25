@@ -174,7 +174,7 @@ All LLM interactions are logged in the `logs/` directory with the following stru
 | Passed | 80 |
 | Failed | 0 |
 
-### Code Coverage (JaCoCo)
+### Code Coverage (JaCoCo) - After Base Tests
 
 | Package | Instruction Coverage | Branch Coverage |
 |---------|---------------------|-----------------|
@@ -182,9 +182,53 @@ All LLM interactions are logged in the `logs/` directory with the following stru
 | solutions.gemini | 98% | 88% |
 | **Total** | **96%** | **88%** |
 
+---
+
+## Test Improvement Results
+
+### Improved Tests Summary (İbrahim's Tasks)
+
+Tests were improved using JaCoCo branch coverage analysis and JNose test smell detection.
+
+| Task | Base Tests | Improved Tests | JaCoCo Issues Fixed | JNose Smells Fixed |
+|------|------------|----------------|---------------------|-------------------|
+| Task 1 | 8 | 10 | else-if false branch | - |
+| Task 2 | 6 | 8 | - | Magic Number (6) |
+| Task 10 | 10 | 7 | null check, unreachable branch* | - |
+| Task 23 | 6 | 9 | - | Magic Number (6) |
+| Task 27 | 6 | - | ✅ Clean | ✅ Clean |
+| Task 28 | 6 | - | ✅ Clean | ✅ Clean |
+| Task 30 | 8 | 9 | - | Magic Number (4) |
+| Task 32 | 2 | 9 | bound expansion loop | Magic Number (2), Conditional Logic (6) |
+| Task 39 | 20 | 12 | - | Magic Number (20) |
+| Task 46 | 8 | 10 | base case if branches | Magic Number (8) |
+
+*Task 10 and Task 32 have unreachable branches due to code structure (loop always breaks before natural termination).
+
+### Code Coverage (JaCoCo) - After Improved Tests
+
+| Package | Instruction Coverage | Branch Coverage |
+|---------|---------------------|-----------------|
+| solutions.claude | **99%** | **98%** |
+| solutions.gemini | **100%** | **97%** |
+| **Total** | **99%** | **97%** |
+
 **Details:**
-- Instructions: 824/851 covered (96%)
-- Branches: 113/128 covered (88%)
-- Lines: 203/206 covered (99%)
+- Instructions: 849/851 covered (99%)
+- Branches: 125/128 covered (97%)
+- Lines: 205/206 covered (99%)
 - Methods: 48/48 covered (100%)
 - Classes: 20/20 covered (100%)
+
+**Coverage Improvement:**
+- Instruction Coverage: 96% → **99%** (+3%)
+- Branch Coverage: 88% → **97%** (+9%)
+
+### Test Execution Summary
+
+| Metric | Value |
+|--------|-------|
+| Total Tests | 154 |
+| Passed | 154 |
+| Failed | 0 |
+| Errors | 0 |
