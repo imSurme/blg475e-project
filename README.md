@@ -239,3 +239,36 @@ Tests were improved using JaCoCo branch coverage analysis and JNose test smell d
 | Passed | 154 |
 | Failed | 0 |
 | Errors | 0 |
+
+---
+
+## Manual Assessment (Step 4)
+
+Black-box testing using Equivalence Class Partitioning (ECP) and Boundary Value Analysis (BVA).
+Mutations based on [EvalPlus paper](https://openreview.net/pdf?id=1qvx610Cu7) Table 1.
+
+### Detailed Analysis
+
+| Owner | Tasks | Details |
+|-------|-------|---------|
+| İbrahim | 1, 2, 10, 23, 27, 28, 30, 32, 39, 46 | [docs/manual_assessment_ibrahim.md](docs/manual_assessment_ibrahim.md) |
+| Başar | TBD | TBD |
+| Ahmet | TBD | TBD |
+
+### Summary (İbrahim's Tasks)
+
+| Task | ECP Classes | Base Coverage | Coverage % |
+|------|-------------|---------------|------------|
+| Task 1 | 10 | 5/10 | 50% |
+| Task 2 | 9 | 2/9 | 22% |
+| Task 10 | 10 | 5/10 | 50% |
+| Task 23 | 8 | 3/8 | 37.5% |
+| Task 27 | 9 | 6/9 | 67% |
+| Task 28 | 8 | 2/8 | 25% |
+| Task 30 | 9 | 4/9 | 44% |
+| Task 32 | 9 | 5/9 | 56% |
+| Task 39 | 7 | 4/7 | 57% |
+| Task 46 | 9 | 2/9 | 22% |
+| **Average** | **8.8** | **3.8/8.8** | **43%** |
+
+**Conclusion:** Base tests cover only ~43% of identified equivalence classes. Boundary values and invalid inputs are largely untested.
