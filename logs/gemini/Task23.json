@@ -1,0 +1,40 @@
+{
+  "task_id": "Java/23",
+  "llm": "Gemini 3.1 Pro",
+  "step": "code_generation",
+  "difficulty": "easy",
+  "date": "2026-04-25",
+  "prompt": [
+    "import java.util.*;",
+    "import java.lang.*;",
+    "",
+    "class Solution {",
+    "    /**",
+    "    Return length of given string",
+    "    >>> strlen(\"\")",
+    "    0",
+    "    >>> strlen(\"abc\")",
+    "    3",
+    "     */",
+    "    public int strlen(String string) {"
+  ],
+  "response": [
+    "import java.util.*;",
+    "import java.lang.*;",
+    "",
+    "class Solution {",
+    "    /**",
+    "    Return length of given string",
+    "    >>> strlen(\"\")",
+    "    0",
+    "    >>> strlen(\"abc\")",
+    "    3",
+    "     */",
+    "    public int strlen(String string) {",
+    "        return string.length();",
+    "    }",
+    "}"
+  ],
+  "modified": false,
+  "notes": "Code used without modification. Gemini used Java's built-in String.length() method."
+}
