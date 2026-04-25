@@ -3,7 +3,7 @@ package solutions.gemini;
 import java.util.*;
 import java.lang.*;
 
-class Task27 {
+public class Task27 {
     /**
     For a given string, flip lowercase characters to uppercase and uppercase to lowercase.
     >>> flipCase("Hello")

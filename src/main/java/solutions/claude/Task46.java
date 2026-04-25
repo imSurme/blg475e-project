@@ -3,7 +3,7 @@ package solutions.claude;
 import java.util.*;
 import java.lang.*;
 
-class Task46 {
+public class Task46 {
     /**
      * The Fib4 number sequence is defined as follows:
      * fib4(0) -> 0

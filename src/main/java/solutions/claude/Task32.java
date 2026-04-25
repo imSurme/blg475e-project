@@ -3,7 +3,7 @@ package solutions.claude;
 import java.util.*;
 import java.lang.*;
 
-class Task32 {
+public class Task32 {
     /**
      * Evaluates polynomial with coefficients xs at point x.
      * return xs[0] + xs[1] * x + xs[1] * x^2 + .... xs[n] * x^n

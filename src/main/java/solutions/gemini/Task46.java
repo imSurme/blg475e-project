@@ -3,7 +3,7 @@ package solutions.gemini;
 import java.util.*;
 import java.lang.*;
 
-class Task46 {
+public class Task46 {
     /**
     The Fib4 number sequence is a sequence similar to the Fibbonacci sequnece that's defined as follows:
     fib4(0) -> 0

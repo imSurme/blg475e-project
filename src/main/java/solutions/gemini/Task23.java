@@ -3,7 +3,7 @@ package solutions.gemini;
 import java.util.*;
 import java.lang.*;
 
-class Task23 {
+public class Task23 {
     /**
     Return length of given string
     >>> strlen("")

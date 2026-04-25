@@ -3,7 +3,7 @@ package solutions.gemini;
 import java.util.*;
 import java.lang.*;
 
-class Task28 {
+public class Task28 {
     /**
     Concatenate list of strings into a single string
     >>> concatenate(List.of())

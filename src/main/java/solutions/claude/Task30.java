@@ -4,7 +4,7 @@ import java.util.*;
 import java.lang.*;
 import java.util.stream.Collectors;
 
-class Task30 {
+public class Task30 {
     /**
     Return only positive numbers in the list.
     >>> getPositive(Arrays.asList(-1, 2, -4, 5, 6))

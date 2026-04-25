@@ -3,7 +3,7 @@ package solutions.gemini;
 import java.util.*;
 import java.lang.*;
 
-class Task10 {
+public class Task10 {
     /**
     Test if given string is a palindrome
      */

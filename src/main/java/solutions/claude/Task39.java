@@ -3,7 +3,7 @@ package solutions.claude;
 import java.util.*;
 import java.lang.*;
 
-class Task39 {
+public class Task39 {
     /**
      * primeFib returns n-th number that is a Fibonacci number and it's also prime.
      * >>> primeFib(1)  -> 2

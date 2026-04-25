@@ -3,7 +3,7 @@ package solutions.gemini;
 import java.util.*;
 import java.lang.*;
 
-class Task2 {
+public class Task2 {
     /**
     Given a positive floating point number, it can be decomposed into
     an integer part (largest integer smaller than given number) and decimals

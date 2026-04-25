@@ -3,7 +3,7 @@ package solutions.gemini;
 import java.util.*;
 import java.lang.*;
 
-class Task1 {
+public class Task1 {
     /**
     Input to this function is a string containing multiple groups of nested parentheses. Your goal is to
     separate those group into separate strings and return the list of those.

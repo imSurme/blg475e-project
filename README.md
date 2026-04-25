@@ -118,3 +118,73 @@ All LLM interactions are logged in the `logs/` directory with the following stru
 - Full prompt sent to the agent
 - Agent's response
 - Notes on how the output was used or modified
+
+---
+
+## Phase 1 Results
+
+### Base Test Results
+
+#### Easy Tasks
+| Task | Test File | Tests | Gemini | Claude | Owner |
+|------|-----------|-------|--------|--------|-------|
+| Java/2 | Task2Test.java | 6 | ✅ Pass | ✅ Pass | İbrahim |
+| Java/23 | Task23Test.java | 6 | ✅ Pass | ✅ Pass | İbrahim |
+| Java/27 | Task27Test.java | 6 | ✅ Pass | ✅ Pass | İbrahim |
+| Java/28 | Task28Test.java | 6 | ✅ Pass | ✅ Pass | İbrahim |
+| Java/30 | Task30Test.java | 8 | ✅ Pass | ✅ Pass | İbrahim |
+| Java/35 | - | - | ⏳ | ⏳ | - |
+| Java/42 | - | - | ⏳ | ⏳ | - |
+| Java/45 | - | - | ⏳ | ⏳ | - |
+| Java/53 | - | - | ⏳ | ⏳ | - |
+| Java/60 | - | - | ⏳ | ⏳ | - |
+
+#### Medium Tasks
+| Task | Test File | Tests | Gemini | Claude | Owner |
+|------|-----------|-------|--------|--------|-------|
+| Java/0 | - | - | ⏳ | ⏳ | - |
+| Java/3 | - | - | ⏳ | ⏳ | - |
+| Java/7 | - | - | ⏳ | ⏳ | - |
+| Java/13 | - | - | ⏳ | ⏳ | - |
+| Java/14 | - | - | ⏳ | ⏳ | - |
+| Java/18 | - | - | ⏳ | ⏳ | - |
+| Java/26 | - | - | ⏳ | ⏳ | - |
+| Java/31 | - | - | ⏳ | ⏳ | - |
+| Java/48 | - | - | ⏳ | ⏳ | - |
+| Java/55 | - | - | ⏳ | ⏳ | - |
+
+#### Hard Tasks
+| Task | Test File | Tests | Gemini | Claude | Owner |
+|------|-----------|-------|--------|--------|-------|
+| Java/1 | Task1Test.java | 8 | ✅ Pass | ✅ Pass | İbrahim |
+| Java/10 | Task10Test.java | 10 | ✅ Pass | ✅ Pass | İbrahim |
+| Java/32 | Task32Test.java | 2 | ✅ Pass | ✅ Pass | İbrahim |
+| Java/39 | Task39Test.java | 20 | ✅ Pass | ✅ Pass | İbrahim |
+| Java/46 | Task46Test.java | 8 | ✅ Pass | ✅ Pass | İbrahim |
+| Java/59 | - | - | ⏳ | ⏳ | - |
+| Java/68 | - | - | ⏳ | ⏳ | - |
+| Java/89 | - | - | ⏳ | ⏳ | - |
+| Java/129 | - | - | ⏳ | ⏳ | - |
+| Java/160 | - | - | ⏳ | ⏳ | - |
+
+#### Summary (İbrahim's Tasks)
+| Metric | Value |
+|--------|-------|
+| Total Tests | 80 |
+| Passed | 80 |
+| Failed | 0 |
+
+### Code Coverage (JaCoCo)
+
+| Package | Instruction Coverage | Branch Coverage |
+|---------|---------------------|-----------------|
+| solutions.claude | 95% | 97% |
+| solutions.gemini | 98% | 88% |
+| **Total** | **96%** | **88%** |
+
+**Details:**
+- Instructions: 824/851 covered (96%)
+- Branches: 113/128 covered (88%)
+- Lines: 203/206 covered (99%)
+- Methods: 48/48 covered (100%)
+- Classes: 20/20 covered (100%)
