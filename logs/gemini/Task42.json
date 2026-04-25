@@ -1,0 +1,38 @@
+{
+  "task_id": "Java/42",
+  "llm": "Gemini 3.1 Pro",
+  "step": "code_generation",
+  "difficulty": "easy",
+  "date": "2026-04-25",
+  "prompt": [
+    "Verilen bir tam sayı listesindeki her bir elemanın değerini 1 artıran ve yeni bir liste olarak döndüren 'incrList' adında bir Java metodu yaz."
+  ],
+  "response": [
+    "package solutions.gemini;",
+    "",
+    "import java.util.*;",
+    "import java.lang.*;",
+    "",
+    "/* @Authors",
+    " * Student Names: Başar Filizcan, İbrahim Mert Sürme, Ahmet Atakan Çulban",
+    " * Student IDs: 820220722, 150220052, 820220342",
+    " */",
+    "public class Task42 {",
+    "    /**",
+    "     * Verilen bir tam sayı listesindeki her bir elemanın değerini 1 artıran ve yeni bir liste olarak döndüren 'incrList' adında bir Java metodu yaz.",
+    "     */",
+    "    public List<Integer> incrList(List<Integer> numbers) {",
+    "        List<Integer> result = new ArrayList<>();",
+    "        if (numbers == null) {",
+    "            return result;",
+    "        }",
+    "        for (Integer num : numbers) {",
+    "            result.add(num + 1);",
+    "        }",
+    "        return result;",
+    "    }",
+    "}"
+  ],
+  "modified": false,
+  "notes": "Full loop implementation without shortcuts."
+}

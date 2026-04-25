@@ -1,0 +1,31 @@
+{
+  "task_id": "Java/60",
+  "llm": "Gemini 3.1 Pro",
+  "step": "code_generation",
+  "difficulty": "easy",
+  "date": "2026-04-25",
+  "prompt": [
+    "1'den başlayıp verilen n sayısına kadar (n dahil) olan tüm tam sayıların toplamını bulan 'sumToN' adında bir Java metodu yaz."
+  ],
+  "response": [
+    "package solutions.gemini;",
+    "",
+    "import java.util.*;",
+    "import java.lang.*;",
+    "",
+    "/* @Authors",
+    " * Student Names: Başar Filizcan, İbrahim Mert Sürme, Ahmet Atakan Çulban",
+    " * Student IDs: 820220722, 150220052, 820220342",
+    " */",
+    "public class Task60 {",
+    "    /**",
+    "     * 1'den başlayıp verilen n sayısına kadar (n dahil) olan tüm tam sayıların toplamını bulan 'sumToN' adında bir Java metodu yaz.",
+    "     */",
+    "    public int sumToN(int n) {",
+    "        return (n * (n + 1)) / 2;",
+    "    }",
+    "}"
+  ],
+  "modified": false,
+  "notes": "Used mathematical formula for efficient sum calculation."
+}

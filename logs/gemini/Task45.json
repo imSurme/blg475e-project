@@ -1,0 +1,31 @@
+{
+  "task_id": "Java/45",
+  "llm": "Gemini 3.1 Pro",
+  "step": "code_generation",
+  "difficulty": "easy",
+  "date": "2026-04-25",
+  "prompt": [
+    "Taban uzunluğu (a) ve yüksekliği (h) verilen bir üçgenin alanını hesaplayıp ondalıklı sayı olarak döndüren 'triangleArea' adında bir Java metodu yaz."
+  ],
+  "response": [
+    "package solutions.gemini;",
+    "",
+    "import java.util.*;",
+    "import java.lang.*;",
+    "",
+    "/* @Authors",
+    " * Student Names: Başar Filizcan, İbrahim Mert Sürme, Ahmet Atakan Çulban",
+    " * Student IDs: 820220722, 150220052, 820220342",
+    " */",
+    "public class Task45 {",
+    "    /**",
+    "     * Taban uzunluğu (a) ve yüksekliği (h) verilen bir üçgenin alanını hesaplayıp ondalıklı sayı olarak döndüren 'triangleArea' adında bir Java metodu yaz.",
+    "     */",
+    "    public double triangleArea(double base, double height) {",
+    "        return (base * height) / 2.0;",
+    "    }",
+    "}"
+  ],
+  "modified": false,
+  "notes": "Standard implementation for triangle area calculation."
+}
