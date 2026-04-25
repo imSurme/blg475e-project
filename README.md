@@ -133,11 +133,11 @@ All LLM interactions are logged in the `logs/` directory with the following stru
 | Java/27 | Task27Test.java | 6 | ✅ Pass | ✅ Pass | İbrahim |
 | Java/28 | Task28Test.java | 6 | ✅ Pass | ✅ Pass | İbrahim |
 | Java/30 | Task30Test.java | 8 | ✅ Pass | ✅ Pass | İbrahim |
-| Java/35 | - | - | ⏳ | ⏳ | - |
-| Java/42 | - | - | ⏳ | ⏳ | - |
-| Java/45 | - | - | ⏳ | ⏳ | - |
-| Java/53 | - | - | ⏳ | ⏳ | - |
-| Java/60 | - | - | ⏳ | ⏳ | - |
+| Java/35 | Task35Test.java | 12 | ✅ Pass | ✅ Pass | Başar |
+| Java/42 | Task42Test.java | 11 | ✅ Pass | ✅ Pass | Başar |
+| Java/45 | Task45Test.java | 11 | ✅ Pass| ✅ Pass | Başar |
+| Java/53 | Task53Test.java | 11 | ✅ Pass | ✅ Pass | Başar |
+| Java/60 | Task60Test.java | 11 | ✅ Pass | ✅ Pass | Başar |
 
 #### Medium Tasks
 | Task | Test File | Tests | Gemini | Claude | Owner |
@@ -161,11 +161,11 @@ All LLM interactions are logged in the `logs/` directory with the following stru
 | Java/32 | Task32Test.java | 2 | ✅ Pass | ✅ Pass | İbrahim |
 | Java/39 | Task39Test.java | 20 | ✅ Pass | ✅ Pass | İbrahim |
 | Java/46 | Task46Test.java | 8 | ✅ Pass | ✅ Pass | İbrahim |
-| Java/59 | - | - | ⏳ | ⏳ | - |
-| Java/68 | - | - | ⏳ | ⏳ | - |
-| Java/89 | - | - | ⏳ | ⏳ | - |
-| Java/129 | - | - | ⏳ | ⏳ | - |
-| Java/160 | - | - | ⏳ | ⏳ | - |
+| Java/59 | Task59Test.java | 11 | ✅ Pass | ✅ Pass | Başar |
+| Java/68 | Task68Test.java | 11 | ✅ Pass | ✅ Pass | Başar |
+| Java/89 | Task89Test.java | 11 | ✅ Pass | ✅ Pass | Başar |
+| Java/129 | Task129Test.java | 11 | ✅ Pass | ✅ Pass | Başar |
+| Java/160 | Task160Test.java | 11 | ✅ Pass | ✅ Pass | Başar |
 
 #### Summary (İbrahim's Tasks)
 | Metric | Value |
@@ -174,13 +174,20 @@ All LLM interactions are logged in the `logs/` directory with the following stru
 | Passed | 80 |
 | Failed | 0 |
 
+#### Summary (Başar's Tasks)
+| Metric | Value |
+|--------|-------|
+| Total Tests | 111 |
+| Passed | 111 |
+| Failed | 0 |
+
 ### Code Coverage (JaCoCo) - After Base Tests
 
 | Package | Instruction Coverage | Branch Coverage |
 |---------|---------------------|-----------------|
-| solutions.claude | 95% | 97% |
-| solutions.gemini | 98% | 88% |
-| **Total** | **96%** | **88%** |
+| solutions.claude | 97% | 89% |
+| solutions.gemini | 98% | 92% |
+| **Total** | **98%** | **91%** |
 
 ---
 
