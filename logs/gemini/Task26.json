@@ -1,0 +1,43 @@
+{
+  "task_id": "Java/26",
+  "llm": "Gemini 3.1 Pro",
+  "difficulty": "medium",
+  "interactions": [
+    {
+      "step": "code_generation",
+      "date": "2026-04-26",
+      "prompt": [
+        "import java.util.*;",
+        "import java.lang.*;",
+        "import java.util.stream.Collectors;",
+        "",
+        "class Solution {",
+        "    /**",
+        "    From a list of integers, remove all elements that occur more than once.",
+        "    Keep order of elements left the same as in the input.",
+        "    >>> removeDuplicates(Array.asList(1, 2, 3, 2, 4))",
+        "    [1, 3, 4]",
+        "     */",
+        "    public List<Integer> removeDuplicates(List<Integer> numbers) {",
+        ""
+      ],
+      "response": [
+        "Map<Integer, Integer> frequencyMap = new HashMap<>();",
+        "        for (Integer num : numbers) {",
+        "            frequencyMap.put(num, frequencyMap.getOrDefault(num, 0) + 1);",
+        "        }",
+        "        ",
+        "        List<Integer> result = new ArrayList<>();",
+        "        for (Integer num : numbers) {",
+        "            if (frequencyMap.get(num) == 1) {",
+        "                result.add(num);",
+        "            }",
+        "        }",
+        "        return result;",
+        "    }",
+        "}"
+      ],
+      "usage_note": "The generated code snippet was used to complete the method body. The class name was changed to Task26 and the package declaration was added."
+    }
+  ]
+}

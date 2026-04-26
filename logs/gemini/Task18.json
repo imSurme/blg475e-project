@@ -1,0 +1,46 @@
+{
+  "task_id": "Java/18",
+  "llm": "Gemini 3.1 Pro",
+  "difficulty": "medium",
+  "interactions": [
+    {
+      "step": "code_generation",
+      "date": "2026-04-26",
+      "prompt": [
+        "import java.util.*;",
+        "import java.lang.*;",
+        "",
+        "class Solution {",
+        "    /**",
+        "    Find how many times a given substring can be found in the original string. Count overlaping cases.",
+        "    >>> howManyTimes(\"\", \"a\")",
+        "    0",
+        "    >>> howManyTimes(\"aaa\", \"a\")",
+        "    3",
+        "    >>> howManyTimes(\"aaaa\", \"aa\")",
+        "    3",
+        "     */",
+        "    public int howManyTimes(String string, String substring) {",
+        ""
+      ],
+      "response": [
+        "if (string == null || string.isEmpty() || substring == null || substring.isEmpty()) {",
+        "            return 0;",
+        "        }",
+        "        ",
+        "        int count = 0;",
+        "        int index = 0;",
+        "        ",
+        "        while ((index = string.indexOf(substring, index)) != -1) {",
+        "            count++;",
+        "            index += 1; // Increment by 1 to allow overlapping matches",
+        "        }",
+        "        ",
+        "        return count;",
+        "    }",
+        "}"
+      ],
+      "usage_note": "The generated code snippet was used to complete the method body. The class name was changed to Task18 and the package declaration was added."
+    }
+  ]
+}
