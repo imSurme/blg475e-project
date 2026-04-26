@@ -216,6 +216,24 @@ Tests were improved using JaCoCo branch coverage analysis and JNose test smell d
 
 *Task 10 and Task 32 have unreachable branches due to code structure (loop always breaks before natural termination).
 
+### Improved Tests Summary (Başar's Tasks)
+
+Tests were improved using JaCoCo branch coverage analysis and JNose test smell detection.
+
+| Task | Base Tests | Improved Tests | JaCoCo Issues Fixed | JNose Smells Fixed |
+|------|------------|----------------|---------------------|-------------------|
+| Task 35 | 12 | 10 | ✅ Clean | ✅ Clean |
+| Task 42 | 11 | 12 | ✅ Clean | Magic Number (8), Assertion Roulette (1)|
+| Task 45 | 11 | - | ✅ Clean | Magic Number (11), Assertion Roulette (1) |
+| Task 53 | 11 | - | ✅ Clean | Magic Number (11) |
+| Task 59 | 11 | 13 | ✅ Clean | Magic Number (13), Assertion Roulette (2) |
+| Task 60 | 11 | - | ✅ Clean | Magic Number (11) |
+| Task 68 | 11 | 14 | null & empty list branches | Magic Number (8), Assertion Roulette (1) |
+| Task 89 | 11 | 19 | Uppercase & symbol branches | Magic Number (11) |
+| Task 129 | 11 | - | ✅ Clean | Magic Number (12), Assertion Roulette (1) |
+| Task 160 | 11 | 14 | default switch branch | Magic Number (12), Assertion Roulette (1) |
+
+
 ### Code Coverage (JaCoCo) - After Improved Tests
 
 | Package | Instruction Coverage | Branch Coverage |
