@@ -25,8 +25,9 @@ This project evaluates LLM-based code and test generation capabilities using the
 ├── logs/
 │   ├── gemini/              # Gemini interaction logs
 │   └── claude/              # Claude interaction logs
+├── docs/                    # Step 4 manual assessment (ECP/BVA analysis)
 ├── humaneval_java.jsonl     # HumanEval Java dataset
-├── pom.xml                  # Maven configuration
+├── pom.xml                  # Maven build, test (JUnit), and JaCoCo coverage configuration
 └── README.md
 ```
 
@@ -106,18 +107,21 @@ mvn test jacoco:report
 ```
 Coverage report will be available at `target/site/jacoco/index.html`
 
-### Commit Message Convention
-Each commit should follow this format:
-```
-Step X: [Description of what was changed and why]
-```
-Example: `Step 3: Improved boundary condition tests based on branch coverage analysis`
-
 ### Log Format
-All LLM interactions are logged in the `logs/` directory with the following structure:
-- Full prompt sent to the agent
-- Agent's response
-- Notes on how the output was used or modified
+All LLM interactions are logged in the `logs/` directory as one JSON file per task:
+- Path format: `logs/{model}/Task{id}.json`
+- Top-level fields:
+  - `task_id` (e.g., `Java/1`)
+  - `llm` (e.g., `Gemini 3.1 Pro`, `Claude Sonnet 4.6`)
+  - `difficulty` (`easy`, `moderate`, `hard`)
+  - `interactions` (array)
+- Each item in `interactions` includes:
+  - `step` (e.g., `code_generation`, `test_improvement`, `test_improvement_2`)
+  - `date`
+  - `prompt` (string array, full prompt lines)
+  - `response` (string array, full unedited model response lines)
+  - `modified` (`true` / `false`)
+  - `notes` (manual edits, corrections, or usage notes)
 
 ---
 
