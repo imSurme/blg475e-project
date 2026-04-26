@@ -1,44 +1,66 @@
-{
-  "task_id": "Java/160",
-  "llm": "Gemini 3.1 Pro",
-  "step": "code_generation",
-  "difficulty": "hard",
-  "date": "2026-04-25",
-  "prompt": [
-    "String dizisi olarak verilen basit operatörleri (\"+\", \"-\", \"*\") ve tam sayı dizisini kullanarak matematiksel işlemi soldan sağa doğru uygulayan 'doAlgebra' adında bir Java metodu yaz."
-  ],
-  "response": [
-    "package solutions.gemini;",
-    "",
-    "import java.util.*;",
-    "import java.lang.*;",
-    "",
-    "/* @Authors",
-    " * Student Names: Başar Filizcan, İbrahim Mert Sürme, Ahmet Atakan Çulban",
-    " * Student IDs: 820220722, 150220052, 820220342",
-    " */",
-    "public class Task160 {",
-    "    /**",
-    "     * String dizisi olarak verilen basit operatörleri (\"+\", \"-\", \"*\") ve tam sayı dizisini kullanarak matematiksel işlemi soldan sağa doğru uygulayan 'doAlgebra' adında bir Java metodu yaz.",
-    "     */",
-    "    public int doAlgebra(String[] operators, int[] operands) {",
-    "        if (operands == null || operands.length == 0) {",
-    "            return 0;",
-    "        }",
-    "        int result = operands[0];",
-    "        for (int i = 0; i < operators.length; i++) {",
-    "            String op = operators[i];",
-    "            int nextVal = operands[i + 1];",
-    "            switch (op) {",
-    "                case \"+\": result += nextVal; break;",
-    "                case \"-\": result -= nextVal; break;",
-    "                case \"*\": result *= nextVal; break;",
-    "            }",
-    "        }",
-    "        return result;",
-    "    }",
-    "}"
-  ],
-  "modified": false,
-  "notes": "Full switch-case implementation for algebra tasks."
-}
+[
+  {
+    "task_id": "Java/160",
+    "llm": "Gemini 3.1 Pro",
+    "step": "code_generation",
+    "difficulty": "hard",
+    "date": "2026-04-25",
+    "prompt": [
+      "String dizisi olarak verilen basit operatörleri (\"+\", \"-\", \"*\") ve tam sayı dizisini kullanarak matematiksel işlemi soldan sağa doğru uygulayan 'doAlgebra' adında bir Java metodu yaz."
+    ],
+    "response": [
+      "package solutions.gemini;",
+      "",
+      "import java.util.*;",
+      "import java.lang.*;",
+      "",
+      "/* @Authors",
+      " * Student Names: Başar Filizcan, İbrahim Mert Sürme, Ahmet Atakan Çulban",
+      " * Student IDs: 820220722, 150220052, 820220342",
+      " */",
+      "public class Task160 {",
+      "    /**",
+      "     * String dizisi olarak verilen basit operatörleri (\"+\", \"-\", \"*\") ve tam sayı dizisini kullanarak matematiksel işlemi soldan sağa doğru uygulayan 'doAlgebra' adında bir Java metodu yaz.",
+      "     */",
+      "    public int doAlgebra(String[] operators, int[] operands) {",
+      "        if (operands == null || operands.length == 0) {",
+      "            return 0;",
+      "        }",
+      "        int result = operands[0];",
+      "        for (int i = 0; i < operators.length; i++) {",
+      "            String op = operators[i];",
+      "            int nextVal = operands[i + 1];",
+      "            switch (op) {",
+      "                case \"+\": result += nextVal; break;",
+      "                case \"-\": result -= nextVal; break;",
+      "                case \"*\": result *= nextVal; break;",
+      "            }",
+      "        }",
+      "        return result;",
+      "    }",
+      "}"
+    ],
+    "modified": false,
+    "notes": "Full switch-case implementation for algebra tasks."
+  },
+  {
+    "task_id": "Java/160",
+    "llm": "Gemini 3.1 Pro",
+    "step": "test_improvement",
+    "difficulty": "hard",
+    "date": "2026-04-26",
+    "prompt": [
+      "Task 160 has 12 Magic Numbers, 1 Assertion Roulette, and partial branch coverage on switch(op) line 24.",
+      "Refactor tests using named constants for operators and operands to fix Magic Numbers.",
+      "Add descriptive messages to assertions to resolve Assertion Roulette.",
+      "Ensure all switch cases ('+', '-', '*') are tested for 100% JaCoCo coverage."
+    ],
+    "response": [
+      "Defined OP_ADD, OP_SUB, and OP_MUL as constants, and extracted all test arrays/integers into private static final variables.",
+      "Created independent test methods for addition, subtraction, multiplication, and a combo sequence to fully cover the switch statement branches.",
+      "Added explicit error messages to every assertEquals to eliminate the Assertion Roulette smell."
+    ],
+    "modified": true,
+    "notes": "Achieved full branch coverage on the algebra logic while clearing all 12 Magic Number smells and the Assertion Roulette."
+  }
+]

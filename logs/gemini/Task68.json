@@ -1,47 +1,22 @@
 {
   "task_id": "Java/68",
   "llm": "Gemini 3.1 Pro",
-  "step": "code_generation",
-  "difficulty": "hard",
-  "date": "2026-04-25",
-  "prompt": [
-    "Verilen bir tam sayı dizisindeki en küçük çift sayıyı ve indeksini [değer, indeks] formatında bir dizi olarak döndüren 'pluck' adında bir Java metodu yaz. Çift sayı yoksa boş dizi döndürsün."
-  ],
-  "response": [
-    "package solutions.gemini;",
-    "",
-    "import java.util.*;",
-    "import java.lang.*;",
-    "",
-    "/* @Authors",
-    " * Student Names: Başar Filizcan, İbrahim Mert Sürme, Ahmet Atakan Çulban",
-    " * Student IDs: 820220722, 150220052, 820220342",
-    " */",
-    "public class Task68 {",
-    "    /**",
-    "     * Verilen bir tam sayı dizisindeki en küçük çift sayıyı ve indeksini [değer, indeks] formatında bir dizi olarak döndüren 'pluck' adında bir Java metodu yaz.",
-    "     */",
-    "    public int[] pluck(int[] arr) {",
-    "        if (arr == null || arr.length == 0) {",
-    "            return new int[0];",
-    "        }",
-    "        int minEven = Integer.MAX_VALUE;",
-    "        int minIndex = -1;",
-    "        for (int i = 0; i < arr.length; i++) {",
-    "            if (arr[i] % 2 == 0) {",
-    "                if (arr[i] < minEven) {",
-    "                    minEven = arr[i];",
-    "                    minIndex = i;",
-    "                }",
-    "            }",
-    "        }",
-    "        if (minIndex == -1) {",
-    "            return new int[0];",
-    "        }",
-    "        return new int[]{minEven, minIndex};",
-    "    }",
-    "}"
-  ],
-  "modified": false,
-  "notes": "Full logic with index tracking for the pluck problem."
+  "difficulty": "easy",
+  "interactions": [
+    {
+      "step": "test_improvement",
+      "date": "2026-04-26",
+      "prompt": [
+        "Task 68 has 'Assertion Roulette' smell in JNose and partial coverage (yellow diamond) on line 20 in JaCoCo.",
+        "Refactor tests using the Master Format: named constants for null/empty/logic cases and descriptive messages in assertions.",
+        "Ensure 100% branch coverage for 'if (arr == null || arr.isEmpty())'."
+      ],
+      "response": [
+        "Created Task68ImprovedTest with separate constants for null and empty inputs to clear the JaCoCo partial coverage.",
+        "Added descriptive string messages to every assertEquals to resolve the JNose Assertion Roulette smell."
+      ],
+      "modified": true,
+      "notes": "Resolved both JNose and JaCoCo issues. Used Long literals (L) to match the method signature List<Long>."
+    }
+  ]
 }

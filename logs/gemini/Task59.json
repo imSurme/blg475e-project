@@ -1,46 +1,62 @@
 {
   "task_id": "Java/59",
   "llm": "Gemini 3.1 Pro",
-  "step": "code_generation",
-  "difficulty": "hard",
-  "date": "2026-04-25",
-  "prompt": [
-    "Verilen pozitif bir sayının en büyük asal çarpanını bulan 'largestPrimeFactor' adında bir Java metodu yaz."
-  ],
-  "response": [
-    "package solutions.gemini;",
-    "",
-    "import java.util.*;",
-    "import java.lang.*;",
-    "",
-    "/* @Authors",
-    " * Student Names: Başar Filizcan, İbrahim Mert Sürme, Ahmet Atakan Çulban",
-    " * Student IDs: 820220722, 150220052, 820220342",
-    " */",
-    "public class Task59 {",
-    "    /**",
-    "     * Verilen pozitif bir sayının en büyük asal çarpanını bulan 'largestPrimeFactor' adında bir Java metodu yaz.",
-    "     */",
-    "    public int largestPrimeFactor(int n) {",
-    "        int largest = 1;",
-    "        int temp = n;",
-    "        while (temp % 2 == 0) {",
-    "            largest = 2;",
-    "            temp /= 2;",
-    "        }",
-    "        for (int i = 3; i <= Math.sqrt(temp); i += 2) {",
-    "            while (temp % i == 0) {",
-    "                largest = i;",
-    "                temp /= i;",
-    "            }",
-    "        }",
-    "        if (temp > 2) {",
-    "            largest = temp;",
-    "        }",
-    "        return largest;",
-    "    }",
-    "}"
-  ],
-  "modified": false,
-  "notes": "Full implementation of the largest prime factor algorithm."
+  "difficulty": "medium",
+  "interactions": [
+    {
+      "step": "code_generation",
+      "date": "2026-04-25",
+      "prompt": [
+        "Verilen bir sayının en büyük asal çarpanını (largest prime factor) bulan 'largestPrimeFactor' adında bir Java metodu yaz."
+      ],
+      "response": [
+        "package solutions.gemini;",
+        "",
+        "/* @Authors",
+        " * Student Names: Başar Filizcan, İbrahim Mert Sürme, Ahmet Atakan Çulban",
+        " * Student IDs: 820220722, 150220052, 820220342",
+        " */",
+        "public class Task59 {",
+        "    /**",
+        "     * En büyük asal çarpanı bulan metot.",
+        "     */",
+        "    public int largestPrimeFactor(int n) {",
+        "        int largestFactor = -1;",
+        "        while (n % 2 == 0) {",
+        "            largestFactor = 2;",
+        "            n /= 2;",
+        "        }",
+        "        for (int i = 3; i <= Math.sqrt(n); i += 2) {",
+        "            while (n % i == 0) {",
+        "                largestFactor = i;",
+        "                n /= i;",
+        "            }",
+        "        }",
+        "        if (n > 2) {",
+        "            largestFactor = n;",
+        "        }",
+        "        return largestFactor;",
+        "    }",
+        "}"
+      ],
+      "modified": false,
+      "notes": "Generated an optimized prime factorization algorithm handling composite numbers and powers of two."
+    },
+    {
+      "step": "test_improvement",
+      "date": "2026-04-26",
+      "prompt": [
+        "Task 59 has 13 Magic Number smells and 2 Assertion Roulette smells in JNose.",
+        "Refactor the tests using JUnit 6 to eliminate the smells by extracting all hardcoded integers into private static final constants.",
+        "Add unique and descriptive failure messages to each assertEquals to resolve Assertion Roulette."
+      ],
+      "response": [
+        "Extracted all input numbers (primes, composites, powers of two) and expected outputs into named static integer constants.",
+        "Resolved Assertion Roulette by splitting multiple assertions logically and appending detailed error string messages to each.",
+        "Maintained 100% test coverage."
+      ],
+      "modified": true,
+      "notes": "Cleared the 13 Magic Number and 2 Assertion Roulette smells while maintaining strict test boundaries."
+    }
+  ]
 }

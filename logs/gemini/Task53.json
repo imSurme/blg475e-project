@@ -1,31 +1,51 @@
 {
   "task_id": "Java/53",
   "llm": "Gemini 3.1 Pro",
-  "step": "code_generation",
   "difficulty": "easy",
-  "date": "2026-04-25",
-  "prompt": [
-    "Verilen iki tam sayıyı toplayan ve sonucunu döndüren 'add' adında basit bir Java metodu yaz."
-  ],
-  "response": [
-    "package solutions.gemini;",
-    "",
-    "import java.util.*;",
-    "import java.lang.*;",
-    "",
-    "/* @Authors",
-    " * Student Names: Başar Filizcan, İbrahim Mert Sürme, Ahmet Atakan Çulban",
-    " * Student IDs: 820220722, 150220052, 820220342",
-    " */",
-    "public class Task53 {",
-    "    /**",
-    "     * Verilen iki tam sayıyı toplayan ve sonucunu döndüren 'add' adında basit bir Java metodu yaz.",
-    "     */",
-    "    public int add(int x, int y) {",
-    "        return x + y;",
-    "    }",
-    "}"
-  ],
-  "modified": false,
-  "notes": "Simple addition method implementation."
+  "interactions": [
+    {
+      "step": "code_generation",
+      "date": "2026-04-25",
+      "prompt": [
+        "Verilen iki tam sayıyı toplayan ve sonucunu döndüren 'add' adında basit bir Java metodu yaz."
+      ],
+      "response": [
+        "package solutions.gemini;",
+        "",
+        "import java.util.*;",
+        "import java.lang.*;",
+        "",
+        "/* @Authors",
+        " * Student Names: Başar Filizcan, İbrahim Mert Sürme, Ahmet Atakan Çulban",
+        " * Student IDs: 820220722, 150220052, 820220342",
+        " */",
+        "public class Task53 {",
+        "    /**",
+        "     * Verilen iki tam sayıyı toplayan ve sonucunu döndüren 'add' adında basit bir Java metodu yaz.",
+        "     */",
+        "    public int add(int x, int y) {",
+        "        return x + y;",
+        "    }",
+        "}"
+      ],
+      "modified": false,
+      "notes": "Generated a straightforward addition method. No external libraries needed."
+    },
+    {
+      "step": "test_improvement",
+      "date": "2026-04-26",
+      "prompt": [
+        "Task 53 has 11 Magic Number smells in JNose. JaCoCo coverage is already at 100%.",
+        "Refactor the tests to eliminate the smells by extracting all hardcoded integers into private static final constants.",
+        "Add descriptive failure messages to assertEquals to prevent Assertion Roulette."
+      ],
+      "response": [
+        "Extracted all positive, negative, mixed, and zero inputs into named static constants (e.g., POS_X, POS_Y, EXPECTED_POS_SUM).",
+        "Included detailed failure messages in every assertEquals assertion.",
+        "Maintained existing 100% test coverage."
+      ],
+      "modified": true,
+      "notes": "Cleared the 11 Magic Number smells completely by adopting a strict constants-based testing structure."
+    }
+  ]
 }

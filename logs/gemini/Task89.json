@@ -1,42 +1,60 @@
-{
-  "task_id": "Java/89",
-  "llm": "Gemini 3.1 Pro",
-  "step": "code_generation",
-  "difficulty": "hard",
-  "date": "2026-04-25",
-  "prompt": [
-    "Verilen bir metindeki harfleri İngiliz alfabesinde 4 adım ileri kaydırarak şifreleyen (Caesar cipher) 'encrypt' adında bir Java metodu yaz."
-  ],
-  "response": [
-    "package solutions.gemini;",
-    "",
-    "import java.util.*;",
-    "import java.lang.*;",
-    "",
-    "/* @Authors",
-    " * Student Names: Başar Filizcan, İbrahim Mert Sürme, Ahmet Atakan Çulban",
-    " * Student IDs: 820220722, 150220052, 820220342",
-    " */",
-    "public class Task89 {",
-    "    /**",
-    "     * Verilen bir metindeki harfleri İngiliz alfabesinde 4 adım ileri kaydırarak şifreleyen (Caesar cipher) 'encrypt' adında bir Java metodu yaz.",
-    "     */",
-    "    public String encrypt(String s) {",
-    "        if (s == null) return null;",
-    "        StringBuilder result = new StringBuilder();",
-    "        for (char c : s.toCharArray()) {",
-    "            if (Character.isLetter(c)) {",
-    "                char base = Character.isLowerCase(c) ? 'a' : 'A';",
-    "                char shifted = (char) ((c - base + 4) % 26 + base);",
-    "                result.append(shifted);",
-    "            } else {",
-    "                result.append(c);",
-    "            }",
-    "        }",
-    "        return result.toString();",
-    "    }",
-    "}"
-  ],
-  "modified": false,
-  "notes": "Implemented Caesar Cipher with a fixed shift of 4."
-}
+[
+  {
+    "task_id": "Java/89",
+    "llm": "Gemini 3.1 Pro",
+    "step": "code_generation",
+    "difficulty": "hard",
+    "date": "2026-04-25",
+    "prompt": [
+      "Verilen bir metindeki harfleri İngiliz alfabesinde 4 adım ileri kaydırarak şifreleyen (Caesar cipher) 'encrypt' adında bir Java metodu yaz."
+    ],
+    "response": [
+      "package solutions.gemini;",
+      "",
+      "import java.util.*;",
+      "import java.lang.*;",
+      "",
+      "/* @Authors",
+      " * Student Names: Başar Filizcan, İbrahim Mert Sürme, Ahmet Atakan Çulban",
+      " * Student IDs: 820220722, 150220052, 820220342",
+      " */",
+      "public class Task89 {",
+      "    /**",
+      "     * Verilen bir metindeki harfleri İngiliz alfabesinde 4 adım ileri kaydırarak şifreleyen (Caesar cipher) 'encrypt' adında bir Java metodu yaz.",
+      "     */",
+      "    public String encrypt(String s) {",
+      "        if (s == null) return null;",
+      "        StringBuilder result = new StringBuilder();",
+      "        for (char c : s.toCharArray()) {",
+      "            if (Character.isLetter(c)) {",
+      "                char base = Character.isLowerCase(c) ? 'a' : 'A';",
+      "                char shifted = (char) ((c - base + 4) % 26 + base);",
+      "                result.append(shifted);",
+      "            } else {",
+      "                result.append(c);",
+      "            }",
+      "        }",
+      "        return result.toString();",
+      "    }",
+      "}"
+    ],
+    "modified": false,
+    "notes": "Implemented Caesar Cipher with a fixed shift of 4."
+  },
+  {
+    "task_id": "Java/89",
+    "llm": "Gemini 3.1 Pro",
+    "step": "test_improvement",
+    "difficulty": "hard",
+    "date": "2026-04-26",
+    "prompt": [
+      "Task 89 passed JNose but has yellow diamonds in JaCoCo for branch coverage on if/else if lines. Refactor tests to achieve 100% coverage and maintain 0 smells. Use private static final constants for all test data."
+    ],
+    "response": [
+      "Added mixed-case and non-alphabetic test cases to exercise all logical branches in the encrypt method.",
+      "All magic strings moved to static constants to comply with JNose clean code standards."
+    ],
+    "modified": true,
+    "notes": "Achieved 100% coverage by adding uppercase and symbol test cases. No smells detected."
+  }
+]

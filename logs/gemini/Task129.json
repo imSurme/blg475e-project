@@ -1,40 +1,60 @@
 {
   "task_id": "Java/129",
   "llm": "Gemini 3.1 Pro",
-  "step": "code_generation",
   "difficulty": "hard",
-  "date": "2026-04-25",
-  "prompt": [
-    "N elemanlı bir sayı listesindeki bitişik alt diziler arasından, toplamı minimum olan alt dizinin toplam değerini bulan 'minPath' adında bir Java metodu yaz."
-  ],
-  "response": [
-    "package solutions.gemini;",
-    "",
-    "import java.util.*;",
-    "import java.lang.*;",
-    "",
-    "/* @Authors",
-    " * Student Names: Başar Filizcan, İbrahim Mert Sürme, Ahmet Atakan Çulban",
-    " * Student IDs: 820220722, 150220052, 820220342",
-    " */",
-    "public class Task129 {",
-    "    /**",
-    "     * N elemanlı bir sayı listesindeki bitişik alt diziler arasından, toplamı minimum olan alt dizinin toplam değerini bulan 'minPath' adında bir Java metodu yaz.",
-    "     */",
-    "    public int minPath(int[] grid) {",
-    "        if (grid == null || grid.length == 0) {",
-    "            return 0;",
-    "        }",
-    "        int minEndingHere = grid[0];",
-    "        int minSoFar = grid[0];",
-    "        for (int i = 1; i < grid.length; i++) {",
-    "            minEndingHere = Math.min(grid[i], minEndingHere + grid[i]);",
-    "            minSoFar = Math.min(minSoFar, minEndingHere);",
-    "        }",
-    "        return minSoFar;",
-    "    }",
-    "}"
-  ],
-  "modified": false,
-  "notes": "Adapted Kadane's algorithm to find minimum contiguous subarray sum."
+  "interactions": [
+    {
+      "step": "code_generation",
+      "date": "2026-04-25",
+      "prompt": [
+        "N elemanlı bir sayı listesindeki bitişik alt diziler arasından, toplamı minimum olan alt dizinin toplam değerini bulan 'minPath' adında bir Java metodu yaz."
+      ],
+      "response": [
+        "package solutions.gemini;",
+        "",
+        "import java.util.*;",
+        "import java.lang.*;",
+        "",
+        "/* @Authors",
+        " * Student Names: Başar Filizcan, İbrahim Mert Sürme, Ahmet Atakan Çulban",
+        " * Student IDs: 820220722, 150220052, 820220342",
+        " */",
+        "public class Task129 {",
+        "    /**",
+        "     * N elemanlı bir sayı listesindeki bitişik alt diziler arasından, toplamı minimum olan alt dizinin toplam değerini bulan 'minPath' adında bir Java metodu yaz.",
+        "     */",
+        "    public int minPath(int[] grid) {",
+        "        if (grid == null || grid.length == 0) {",
+        "            return 0;",
+        "        }",
+        "        int minEndingHere = grid[0];",
+        "        int minSoFar = grid[0];",
+        "        for (int i = 1; i < grid.length; i++) {",
+        "            minEndingHere = Math.min(grid[i], minEndingHere + grid[i]);",
+        "            minSoFar = Math.min(minSoFar, minEndingHere);",
+        "        }",
+        "        return minSoFar;",
+        "    }",
+        "}"
+      ],
+      "modified": false,
+      "notes": "Adapted Kadane's algorithm to find minimum contiguous subarray sum."
+    },
+    {
+      "step": "test_improvement",
+      "date": "2026-04-26",
+      "prompt": [
+        "Task 129 has 12 Magic Numbers and 1 Assertion Roulette smell in JNose.",
+        "JaCoCo coverage is already at 100%.",
+        "Refactor the tests to eliminate the smells by extracting all hardcoded arrays into private static final constants and adding descriptive messages to assertEquals."
+      ],
+      "response": [
+        "Extracted all int[] inputs (mixed signs, all positive, all negative, empty) and their expected integer results into descriptive constants.",
+        "Appended custom error messages to every assertion to ensure the Assertion Roulette smell is cleared.",
+        "Maintained 100% branch and line coverage."
+      ],
+      "modified": true,
+      "notes": "Code smell cleared. Handled the data type difference where Gemini expects int[] while Claude expects List<Integer> by isolating constant definitions."
+    }
+  ]
 }
