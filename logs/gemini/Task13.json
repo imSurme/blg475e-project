@@ -1,0 +1,37 @@
+{
+  "task_id": "Java/13",
+  "llm": "Gemini 3.1 Pro",
+  "difficulty": "medium",
+  "interactions": [
+    {
+      "step": "code_generation",
+      "date": "2026-04-26",
+      "prompt": [
+        "import java.util.*;",
+        "import java.lang.*;",
+        "",
+        "class Solution {",
+        "    /**",
+        "    Return a greatest common divisor of two integers a and b",
+        "    >>> greatestCommonDivisor(3, 5)",
+        "    1",
+        "    >>> greatestCommonDivisor(25, 15)",
+        "    5",
+        "     */",
+        "    public int greatestCommonDivisor(int a, int b) {",
+        ""
+      ],
+      "response": [
+        "while (b != 0) {",
+        "            int temp = b;",
+        "            b = a % b;",
+        "            a = temp;",
+        "        }",
+        "        return Math.abs(a);",
+        "    }",
+        "}"
+      ],
+      "usage_note": "The generated code snippet was used to complete the method body. The class name was changed to Task13 and the package declaration was added."
+    }
+  ]
+}

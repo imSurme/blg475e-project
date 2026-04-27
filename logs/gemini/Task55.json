@@ -1,0 +1,44 @@
+{
+  "task_id": "Java/55",
+  "llm": "Gemini 3.1 Pro",
+  "difficulty": "medium",
+  "interactions": [
+    {
+      "step": "code_generation",
+      "date": "2026-04-26",
+      "prompt": [
+        "import java.util.*;",
+        "import java.lang.*;",
+        "",
+        "class Solution {",
+        "    /**",
+        "    Return n-th Fibonacci number.",
+        "    >>> fib(10)",
+        "    55",
+        "    >>> fib(1)",
+        "    1",
+        "    >>> fib(8)",
+        "    21",
+        "     */",
+        "    public int fib(int n) {",
+        ""
+      ],
+      "response": [
+        "if (n <= 1) {",
+        "            return n;",
+        "        }",
+        "        int a = 0;",
+        "        int b = 1;",
+        "        for (int i = 2; i <= n; i++) {",
+        "            int next = a + b;",
+        "            a = b;",
+        "            b = next;",
+        "        }",
+        "        return b;",
+        "    }",
+        "}"
+      ],
+      "usage_note": "The generated code snippet was used to complete the method body. The class name was changed to Task55 and the package declaration was added."
+    }
+  ]
+}

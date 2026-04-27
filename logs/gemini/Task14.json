@@ -1,0 +1,34 @@
+{
+  "task_id": "Java/14",
+  "llm": "Gemini 3.1 Pro",
+  "difficulty": "medium",
+  "interactions": [
+    {
+      "step": "code_generation",
+      "date": "2026-04-26",
+      "prompt": [
+        "import java.util.*;",
+        "import java.lang.*;",
+        "",
+        "class Solution {",
+        "    /**",
+        "    Return list of all prefixes from shortest to longest of the input string",
+        "    >>> allPrefixes(\"abc\")",
+        "    [\"a\", \"ab\", \"abc\"]",
+        "     */",
+        "    public List<String> allPrefixes(String string) {",
+        ""
+      ],
+      "response": [
+        "List<String> result = new ArrayList<>();",
+        "        for (int i = 1; i <= string.length(); i++) {",
+        "            result.add(string.substring(0, i));",
+        "        }",
+        "        return result;",
+        "    }",
+        "}"
+      ],
+      "usage_note": "The generated code snippet was used to complete the method body. The class name was changed to Task14 and the package declaration was added."
+    }
+  ]
+}

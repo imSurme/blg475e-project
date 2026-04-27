@@ -1,0 +1,38 @@
+{
+  "task_id": "Java/7",
+  "llm": "Gemini 3.1 Pro",
+  "difficulty": "medium",
+  "interactions": [
+    {
+      "step": "code_generation",
+      "date": "2026-04-26",
+      "prompt": [
+        "import java.util.*;",
+        "import java.lang.*;",
+        "",
+        "class Solution {",
+        "    /**",
+        "    Filter an input list of strings only for ones that contain given substring",
+        "    >>> filterBySubstring(List.of(), \"a\")",
+        "    []",
+        "    >>> filterBySubstring(Arrays.asList(\"abc\", \"bacd\", \"cde\", \"array\"), \"a\")",
+        "    [\"abc\", \"bacd\", \"array\"]",
+        "     */",
+        "    public List<String> filterBySubstring(List<String> strings, String substring) {",
+        ""
+      ],
+      "response": [
+        "List<String> result = new ArrayList<>();",
+        "        for (String s : strings) {",
+        "            if (s.contains(substring)) {",
+        "                result.add(s);",
+        "            }",
+        "        }",
+        "        return result;",
+        "    }",
+        "}"
+      ],
+      "usage_note": "The generated code snippet was used to complete the method body. The class name was changed to Task7 and the package declaration was added."
+    }
+  ]
+}
