@@ -1,18 +1,16 @@
 package solutions.claude;
-import java.util.*;
-import java.lang.*;
-/* @Authors
- * Student Names: Başar Filizcan, İbrahim Mert Sürme, Ahmet Atakan Çulban
- * Student IDs: 820220722, 150220052, 820220342
- */
+
 public class Task60 {
     /**
-     * 1'den başlayıp verilen n sayısına kadar (n dahil) olan tüm tam sayıların toplamını bulur.
-     * Örnek: n=5 için 1+2+3+4+5=15 döndürür.
-     * @param n Üst sınır tam sayısı
-     * @return 1'den n'e kadar olan tam sayıların toplamı
+     * Return the sum of numbers from 1 to n.
+     * * [REFACTOR NOTE]: Refactored after Manual Assessment (Task60ManualTest).
+     * The initial LLM implementation applied the mathematical formula incorrectly 
+     * for negative integers (EC4). Added a defensive check to return 0 for n <= 0.
      */
     public int sumToN(int n) {
+        if (n <= 0) {
+            return 0;
+        }
         return n * (n + 1) / 2;
     }
 }
