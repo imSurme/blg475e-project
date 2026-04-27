@@ -188,17 +188,17 @@ All LLM interactions are logged in the `logs/` directory as one JSON file per ta
 #### Summary (Ahmet's Tasks)
 | Metric | Value |
 |--------|-------|
-| Total Tests | 56 |
-| Passed | 56 |
+| Total Tests | 112 |
+| Passed | 112 |
 | Failed | 0 |
 
 ### Code Coverage (JaCoCo) - After Base Tests
 
 | Package | Instruction Coverage | Branch Coverage |
 |---------|---------------------|-----------------|
-| solutions.claude | 98% | 91% |
-| solutions.gemini | 99% | 93% |
-| **Total** | **99%** | **92%** |
+| solutions.claude | 99% | 96% |
+| solutions.gemini | 100% | 96% |
+| **Total** | **99%** | **96%** |
 
 ---
 
@@ -240,6 +240,22 @@ Tests were improved using JaCoCo branch coverage analysis and JNose test smell d
 | Task 129 | 11 | - | ✅ Clean | Magic Number (12), Assertion Roulette (1) |
 | Task 160 | 11 | 14 | default switch branch | Magic Number (12), Assertion Roulette (1) |
 
+### Improved Tests Summary (Ahmet's Tasks)
+
+Tests were improved using JaCoCo branch coverage analysis and JNose test smell detection.
+
+| Task | Base Tests | Improved Tests | JaCoCo Issues Fixed | JNose Smells Fixed |
+|------|------------|----------------|---------------------|-------------------|
+| Task 0 | 14 | - | ✅ Clean | Assertion Roulette (1) |
+| Task 3 | 12 | - | ✅ Clean | Assertion Roulette (1) |
+| Task 7 | 8 | - | ✅ Clean | Assertion Roulette (1) |
+| Task 13 | 8 | - | ✅ Clean | Assertion Roulette (1) |
+| Task 14 | 6 | - | ✅ Clean | Assertion Roulette (1) |
+| Task 18 | 8 | 2 | empty & null string branches | Assertion Roulette (1) |
+| Task 26 | 6 | - | ✅ Clean | Assertion Roulette (1) |
+| Task 31 | 26 | 2 | composite odd number branches | Assertion Roulette (1) |
+| Task 48 | 14 | - | ✅ Clean | Assertion Roulette (1) |
+| Task 55 | 10 | 2 | non-positive bounds (n <= 1) | Assertion Roulette (1) |
 
 ### Code Coverage (JaCoCo) - After Improved Tests
 
@@ -250,22 +266,22 @@ Tests were improved using JaCoCo branch coverage analysis and JNose test smell d
 | **Total** | **99%** | **97%** |
 
 **Details:**
-- Instructions: 849/851 covered (99%)
-- Branches: 125/128 covered (97%)
-- Lines: 205/206 covered (99%)
-- Methods: 48/48 covered (100%)
-- Classes: 20/20 covered (100%)
+- Instructions: 2166/2170 covered (99%)
+- Branches: 313/320 covered (97%)
+- Lines: 508/509 covered (99%)
+- Methods: 110/110 covered (100%)
+- Classes: 60/60 covered (100%)
 
 **Coverage Improvement:**
-- Instruction Coverage: 96% → **99%** (+3%)
-- Branch Coverage: 88% → **97%** (+9%)
+- Instruction Coverage: 99% → **99%** 
+- Branch Coverage: 96% → **97%** (+1%)
 
 ### Test Execution Summary
 
 | Metric | Value |
 |--------|-------|
-| Total Tests | 154 |
-| Passed | 154 |
+| Total Tests | 539 |
+| Passed | 539 |
 | Failed | 0 |
 | Errors | 0 |
 

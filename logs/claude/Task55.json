@@ -35,6 +35,42 @@
         "return b;"
       ],
       "usage_note": "The generated code snippet was used to complete the method body. The class name was changed to Task55 and the package declaration was added."
+    },
+    {
+      "step": "test_improvement",
+      "date": "2026-04-27",
+      "prompt": [
+        "I am testing the following Java class using JUnit 5. I gathered the code coverage using JaCoCo, and my current branch coverage is not 100% because the `if (n <= 0)` check is not fully evaluated. In the current test suite, `n` only takes positive values.",
+        "",
+        "Here is the source code for Task 55:",
+        "```java",
+        "package solutions.claude;",
+        "public class Task55 {",
+        "    public int fib(int n) {",
+        "        if (n <= 0) return 0;",
+        "        if (n == 1) return 1;",
+        "        int a = 0, b = 1;",
+        "        for (int i = 2; i <= n; i++) {",
+        "            int temp = a + b;",
+        "            a = b;",
+        "            b = temp;",
+        "        }",
+        "        return b;",
+        "    }",
+        "}",
+        "```",
+        "Could you provide the missing assertEquals test case(s) inside a new JUnit 5 @Test method to cover the branch where n is equal to 0, and where n is negative? This is specifically to achieve 100% JaCoCo branch coverage.",
+        "Only reply with the Java code of the new JUnit 5 @Test method, no other explanations."
+      ],
+      "response": [
+        "@Test",
+        "void testNonPositiveInput() {",
+        "    Task55 task = new Task55();",
+        "    assertEquals(0, task.fib(0));",
+        "    assertEquals(0, task.fib(-1));",
+        "    assertEquals(0, task.fib(-100));",
+        "}"
+      ]
     }
   ]
 }
