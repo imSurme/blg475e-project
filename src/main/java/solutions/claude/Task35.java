@@ -1,22 +1,20 @@
+
 package solutions.claude;
-import java.util.*;
-import java.lang.*;
-/* @Authors
- * Student Names: Başar Filizcan, İbrahim Mert Sürme, Ahmet Atakan Çulban
- * Student IDs: 820220722, 150220052, 820220342
- */
-public class Task35 {
-    /**
-     * Verilen bir tam sayı listesi içindeki en büyük elemanı (maksimum değeri) bulup döndürür.
-     * @param numbers Tam sayılardan oluşan liste
-     * @return Listedeki maksimum değer
+
+import java.util.List;
+ /**
+     * Return the maximum element in a list of integers.
+     * * [REFACTOR NOTE]: Refactored after Manual Assessment (Task35ManualTest).
+     * Integrated boundary checks to ensure robust handling of EC1/BV1 (empty/null cases)
+     * as required by manual black-box testing results.
      */
-    public int maxElement(List<Integer> numbers) {
-        int max = numbers.get(0);
-        for (int num : numbers) {
-            if (num > max) {
-                max = num;
-            }
+public class Task35 {
+    public Integer maxElement(List<Integer> l) {
+        if (l == null || l.isEmpty()) return null;
+
+        int max = l.get(0);
+        for (int i = 1; i < l.size(); i++) {
+            if (l.get(i) > max) max = l.get(i);
         }
         return max;
     }
