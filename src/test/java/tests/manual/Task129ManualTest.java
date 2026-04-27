@@ -18,11 +18,11 @@ class Task129ManualTest {
         solutions.gemini.Task129 g = new solutions.gemini.Task129();
         solutions.claude.Task129 c = new solutions.claude.Task129();
         
-        // Büyük sürpriz: Gemini de 2D yerine 1D dizi (int[]) kullanmış!
+       
         int[] gridArray = {5};
         assertEquals(5, g.minPath(gridArray), "Gemini: 1x1 array should return 5");
         
-        // Claude ise 1 boyutlu düz liste (List<Integer>) kullanmış.
+        
         List<Integer> gridList = Collections.singletonList(5);
         assertEquals(5, c.minPath(gridList), "Claude: 1x1 list should return 5");
     }

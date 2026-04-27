@@ -27,7 +27,6 @@ class Task60ManualTest {
     @DisplayName("Claude: make negative mutation")
     void claude_makeNegative() {
         solutions.claude.Task60 s = new solutions.claude.Task60();
-        // Negatif girdilerde toplamın 0 (veya döngüye girmiyorsa 0) olmasını bekleriz
         assertEquals(0, s.sumToN(-5));
     }
 

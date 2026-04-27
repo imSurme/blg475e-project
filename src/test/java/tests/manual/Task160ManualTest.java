@@ -18,15 +18,15 @@ class Task160ManualTest {
         solutions.gemini.Task160 g = new solutions.gemini.Task160();
         solutions.claude.Task160 c = new solutions.claude.Task160();
         
-        // Gemini için Array kullanıyoruz
+        
         String[] emptyOpsArray = new String[0];
         int[] singleOperandArray = {42};
         assertEquals(42, g.doAlgebra(emptyOpsArray, singleOperandArray), 
             "Gemini: Empty operators should return the single operand.");
         
-        // Claude için List kullanıyoruz
-        List<String> emptyOpsList = new ArrayList<>(); // Boş operatör listesi
-        List<Integer> singleOperandList = Collections.singletonList(42); // Tek elemanlı değer listesi
+        
+        List<String> emptyOpsList = new ArrayList<>(); 
+        List<Integer> singleOperandList = Collections.singletonList(42); 
         assertEquals(42, c.doAlgebra(emptyOpsList, singleOperandList), 
             "Claude: Empty operators should return the single operand."); 
     }
@@ -36,11 +36,11 @@ class Task160ManualTest {
     void gemini_invalidOp() {
         solutions.gemini.Task160 s = new solutions.gemini.Task160();
         
-        // Gemini Array bekliyor
+   
         String[] ops = {"?"};
         int[] vals = {10, 5};
         
-        // Hatalı operatörde switch default'a düşüp ilk sayıyı dönmeli (veya tasarlandığı default değeri)
+        
         assertEquals(10, s.doAlgebra(ops, vals));
     }
 
