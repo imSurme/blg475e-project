@@ -146,16 +146,16 @@ All LLM interactions are logged in the `logs/` directory as one JSON file per ta
 #### Medium Tasks
 | Task | Test File | Tests | Gemini | Claude | Owner |
 |------|-----------|-------|--------|--------|-------|
-| Java/0 | Task0Test.java | 2 | ✅ Pass | ✅ Pass | Ahmet |
-| Java/3 | Task3Test.java | 2 | ✅ Pass | ✅ Pass | Ahmet |
-| Java/7 | Task7Test.java | 2 | ✅ Pass | ✅ Pass | Ahmet |
-| Java/13 | Task13Test.java | 2 | ✅ Pass | ✅ Pass | Ahmet |
-| Java/14 | Task14Test.java | 2 | ✅ Pass | ✅ Pass | Ahmet |
-| Java/18 | Task18Test.java | 2 | ✅ Pass | ✅ Pass | Ahmet |
-| Java/26 | Task26Test.java | 2 | ✅ Pass | ✅ Pass | Ahmet |
-| Java/31 | Task31Test.java | 2 | ✅ Pass | ✅ Pass | Ahmet |
-| Java/48 | Task48Test.java | 2 | ✅ Pass | ✅ Pass | Ahmet |
-| Java/55 | Task55Test.java | 2 | ✅ Pass | ✅ Pass | Ahmet |
+| Java/0 | Task0Test.java | 7 | ✅ Pass | ✅ Pass | Ahmet |
+| Java/3 | Task3Test.java | 6 | ✅ Pass | ✅ Pass | Ahmet |
+| Java/7 | Task7Test.java | 4 | ✅ Pass | ✅ Pass | Ahmet |
+| Java/13 | Task13Test.java | 4 | ✅ Pass | ✅ Pass | Ahmet |
+| Java/14 | Task14Test.java | 3 | ✅ Pass | ✅ Pass | Ahmet |
+| Java/18 | Task18Test.java | 4 | ✅ Pass | ✅ Pass | Ahmet |
+| Java/26 | Task26Test.java | 3 | ✅ Pass | ✅ Pass | Ahmet |
+| Java/31 | Task31Test.java | 13 | ✅ Pass | ✅ Pass | Ahmet |
+| Java/48 | Task48Test.java | 7 | ✅ Pass | ✅ Pass | Ahmet |
+| Java/55 | Task55Test.java | 5 | ✅ Pass | ✅ Pass | Ahmet |
 
 #### Hard Tasks
 | Task | Test File | Tests | Gemini | Claude | Owner |
@@ -188,8 +188,8 @@ All LLM interactions are logged in the `logs/` directory as one JSON file per ta
 #### Summary (Ahmet's Tasks)
 | Metric | Value |
 |--------|-------|
-| Total Tests | 20 |
-| Passed | 20 |
+| Total Tests | 56 |
+| Passed | 56 |
 | Failed | 0 |
 
 ### Code Coverage (JaCoCo) - After Base Tests
