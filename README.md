@@ -196,9 +196,9 @@ All LLM interactions are logged in the `logs/` directory as one JSON file per ta
 
 | Package | Instruction Coverage | Branch Coverage |
 |---------|---------------------|-----------------|
-| solutions.claude | 97% | 89% |
-| solutions.gemini | 98% | 92% |
-| **Total** | **98%** | **91%** |
+| solutions.claude | 98% | 91% |
+| solutions.gemini | 99% | 93% |
+| **Total** | **99%** | **92%** |
 
 ---
 
