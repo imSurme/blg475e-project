@@ -297,7 +297,7 @@ Mutations based on [EvalPlus paper](https://openreview.net/pdf?id=1qvx610Cu7) Ta
 | Owner | Tasks | Details |
 |-------|-------|---------|
 | İbrahim | 1, 2, 10, 23, 27, 28, 30, 32, 39, 46 | [docs/manual_assessment_ibrahim.md](docs/manual_assessment_ibrahim.md) |
-| Başar | TBD | TBD |
+| Başar | 35, 42, 45, 53, 59, 60, 68, 89, 129, 160 | [docs/manual_assessment_başar.md](docs/manual_assessment_başar.md) |
 | Ahmet | TBD | TBD |
 
 ### Summary (İbrahim's Tasks)
@@ -317,3 +317,21 @@ Mutations based on [EvalPlus paper](https://openreview.net/pdf?id=1qvx610Cu7) Ta
 | **Average** | **8.8** | **3.8/8.8** | **43%** |
 
 **Conclusion:** Base tests cover only ~43% of identified equivalence classes. Boundary values and invalid inputs are largely untested.
+
+### Summary (Başar's Tasks)
+
+| Task | ECP Classes | Base Coverage | Coverage % |
+|------|-------------|---------------|------------|
+| Task 35 | 8 | 3/8 | 37.5% |
+| Task 42 | 7 | 4/7 | 57% |
+| Task 45 | 6 | 4/6 | 66.6% |
+| Task 53 | 6 | 2/6 | 33.3% |
+| Task 59 | 8 | 4/8 | 50% |
+| Task 60 | 6 | 2/6 | 33.3% |
+| Task 68 | 9 | 3/9 | 33.3% |
+| Task 89 | 8 | 3/8 | 37.5% |
+| Task 129 | 9 | 4/9 | 44.4% |
+| Task 160 | 10 | 4/10 | 40% |
+| **Average** | **7.7** | **3.3/7.7** | **42.85%** |
+
+**Conclusion:** Base tests cover only ~42.85% of identified equivalence classes. Boundary values and invalid inputs are largely untested.
