@@ -39,6 +39,56 @@
         "}"
       ],
       "usage_note": "The generated code snippet was used to complete the method body. The class name was changed to Task55 and the package declaration was added."
+    },
+    {
+      "step": "test_improvement",
+      "date": "2026-04-27",
+      "prompt": [
+        "I am testing the following Java class using JUnit 5. I gathered the code coverage using JaCoCo, and my current branch coverage is not 100% because the `if (n <= 1)` check is not fully evaluated. In the current test suite, `n` only takes positive values.",
+        "",
+        "Here is the source code for Task 55:",
+        "```java",
+        "package solutions.gemini;",
+        "public class Task55 {",
+        "    public int fib(int n) {",
+        "        if (n <= 1) {",
+        "            return n;",
+        "        }",
+        "        int a = 0;",
+        "        int b = 1;",
+        "        for (int i = 2; i <= n; i++) {",
+        "            int next = a + b;",
+        "            a = b;",
+        "            b = next;",
+        "        }",
+        "        return b;",
+        "    }",
+        "}",
+        "```",
+        "Could you provide the missing assertEquals test case(s) inside a new JUnit 5 @Test method to cover the branch where n is equal to 0, and where n is negative? This is specifically to achieve 100% JaCoCo branch coverage.",
+        "Only reply with the Java code of the new JUnit 5 @Test method, no other explanations."
+      ],
+      "response": [
+        "import org.junit.jupiter.api.Test;",
+        "import static org.junit.jupiter.api.Assertions.assertEquals;",
+        "",
+        "public class Task55Test {",
+        "",
+        "    @Test",
+        "    void testFib_FullBranchCoverage() {",
+        "        Task55 task = new Task55();",
+        "",
+        "        // 1. Branch: n <= 1 evaluates to TRUE",
+        "        assertEquals(0, task.fib(0), \"Fibonacci of 0 should be 0\");",
+        "        assertEquals(1, task.fib(1), \"Fibonacci of 1 should be 1 (Boundary)\");",
+        "        assertEquals(-1, task.fib(-1), \"Fibonacci of -1 should return -1 based on the method logic\");",
+        "",
+        "        // 2. Branch: n <= 1 evaluates to FALSE",
+        "        assertEquals(1, task.fib(2), \"Fibonacci of 2 should be 1\");",
+        "        assertEquals(5, task.fib(5), \"Fibonacci of 5 should be 5\");",
+        "    }",
+        "}"
+      ]
     }
   ]
 }

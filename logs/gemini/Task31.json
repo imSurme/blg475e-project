@@ -45,6 +45,62 @@
         "}"
       ],
       "usage_note": "The generated code snippet was used to complete the method body. The class name was changed to Task31 and the package declaration was added."
+    },
+    {
+      "step": "test_improvement",
+      "date": "2026-04-27",
+      "prompt": [
+        "I am testing the following Java class using JUnit 5. I gathered the code coverage using JaCoCo, and my current branch coverage is less than 100% because the conditional branch inside the `for` loop `if (n % i == 0)` only ever evaluates to true when `i = 2` with the current test suite. It is never tested with an odd composite number where `i > 2`.",
+        "",
+        "Here is the source code for Task 31:",
+        "```java",
+        "package solutions.gemini;",
+        "public class Task31 {",
+        "    public boolean isPrime(int n) {",
+        "        if (n < 2) {",
+        "            return false;",
+        "        }",
+        "        for (int i = 2; i * i <= n; i++) {",
+        "            if (n % i == 0) {",
+        "                return false;",
+        "            }",
+        "        }",
+        "        return true;",
+        "    }",
+        "}",
+        "```",
+        "Could you provide the missing assertEquals test case(s) inside a new JUnit 5 @Test method to ensure the if (n % i == 0) branch evaluates to true when i is greater than 2? (Hint: A composite odd number like 9 or 15 would trigger this condition when i = 3).",
+        "Only reply with the Java code of the new JUnit 5 @Test method, no other explanations."
+      ],
+      "response": [
+        "import org.junit.jupiter.api.Test;",
+        "import static org.junit.jupiter.api.Assertions.assertFalse;",
+        "import static org.junit.jupiter.api.Assertions.assertTrue;",
+        "",
+        "public class Task31Test {",
+        "",
+        "    @Test",
+        "    void testIsPrime_FullBranchCoverage() {",
+        "        Task31 task = new Task31();",
+        "",
+        "        // 1. THE MISSING BRANCH: Odd composite number",
+        "        assertFalse(task.isPrime(9), \"9 is an odd composite number, should return false\");",
+        "",
+        "        // 2. Branch: n < 2",
+        "        assertFalse(task.isPrime(1), \"1 is not prime\");",
+        "        assertFalse(task.isPrime(-5), \"Negative numbers are not prime\");",
+        "",
+        "        // 3. Branch: Even composite number",
+        "        assertFalse(task.isPrime(4), \"4 is an even composite number, should return false\");",
+        "",
+        "        // 4. Branch: Loop condition becomes false immediately",
+        "        assertTrue(task.isPrime(2), \"2 is a prime number\");",
+        "",
+        "        // 5. Branch: Loop executes but never hits the internal 'if' condition",
+        "        assertTrue(task.isPrime(5), \"5 is a prime number\");",
+        "    }",
+        "}"
+      ]
     }
   ]
 }

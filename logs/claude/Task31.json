@@ -41,6 +41,40 @@
         "return true;"
       ],
       "usage_note": "The generated code snippet was used to complete the method body. The class name was changed to Task31 and the package declaration was added."
+    },
+    {
+      "step": "test_improvement",
+      "date": "2026-04-27",
+      "prompt": [
+        "I am testing the following Java class using JUnit 5. I gathered the code coverage using JaCoCo, and my current branch coverage is less than 100% because the conditional branch inside the `for` loop `if (n % i == 0)` is never completely evaluated (it's never hit with a condition that returns true during testing).",
+        "",
+        "Here is the source code for Task 31:",
+        "```java",
+        "package solutions.claude;",
+        "public class Task31 {",
+        "    public boolean isPrime(int n) {",
+        "        if (n < 2) return false;",
+        "        if (n == 2) return true;",
+        "        if (n % 2 == 0) return false;",
+        "        for (int i = 3; i <= Math.sqrt(n); i += 2) {",
+        "            if (n % i == 0) return false;",
+        "        }",
+        "        return true;",
+        "    }",
+        "}",
+        "```",
+        "Could you provide the missing assertEquals test case(s) inside a new JUnit 5 @Test method to ensure the if (n % i == 0) branch evaluates to true within the loop? (Hint: A composite odd number like 9 or 15 would trigger this conditional).",
+        "Only reply with the Java code of the new JUnit 5 @Test method, no other explanations."
+      ],
+      "response": [
+        "@Test",
+        "void testCompositeOddNumber() {",
+        "    Task31 task = new Task31();",
+        "    assertEquals(false, task.isPrime(9));",
+        "    assertEquals(false, task.isPrime(15));",
+        "    assertEquals(false, task.isPrime(25));",
+        "}"
+      ]
     }
   ]
 }

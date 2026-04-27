@@ -34,6 +34,41 @@
         "return count;"
       ],
       "usage_note": "The generated code snippet was used to complete the method body. The class name was changed to Task18 and the package declaration was added."
+    },
+    {
+      "step": "test_improvement",
+      "date": "2026-04-27",
+      "prompt": [
+        "I am testing the following Java class using JUnit 5. I gathered the code coverage using JaCoCo, and my current branch coverage is 87% because the `if` condition checking if the strings are empty is not fully tested with both combinations of empty and non-empty strings.",
+        "Here is the source code for Task 18:",
+        "```java",
+        "package solutions.claude;",
+        "public class Task18 {",
+        "    public int howManyTimes(String string, String substring) {",
+        "        if (string.isEmpty() || substring.isEmpty()) return 0;",
+        "        ",
+        "        int count = 0;",
+        "        for (int i = 0; i <= string.length() - substring.length(); i++) {",
+        "            if (string.substring(i, i + substring.length()).equals(substring)) {",
+        "                count++;",
+        "            }",
+        "        }",
+        "        return count;",
+        "    }",
+        "}",
+        "```",
+        "Could you provide the missing assertEquals test cases inside a new JUnit 5 @Test method to cover the branches where either the string is empty, or both are empty? This is specifically to achieve 100% JaCoCo branch coverage.",
+        "Only reply with the Java code of the new JUnit 5 @Test method(s), no other explanations."
+      ],
+      "response": [
+        "@Test",
+        "void testEmptyStringCombinations() {",
+        "    Task18 task = new Task18();",
+        "    assertEquals(0, task.howManyTimes(\"\", \"abc\"));",
+        "    assertEquals(0, task.howManyTimes(\"abc\", \"\"));",
+        "    assertEquals(0, task.howManyTimes(\"\", \"\"));",
+        "}"
+      ]
     }
   ]
 }
